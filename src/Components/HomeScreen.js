@@ -16,7 +16,7 @@ function HomeScreen() {
             <Banner />
 
             {/* Row */}
-            {/* <Row
+            <Row
                 title="NETFLIX ORIGINALS"
                 fetchUrl={requests.fetchNetflixOriginals}
                 isLargeRow
@@ -48,7 +48,7 @@ function HomeScreen() {
             <Row
                 title="Documentaries"
                 fetchUrl={requests.fetchDocumentaries}
-            /> */}
+            />
         </div>
     )
 }

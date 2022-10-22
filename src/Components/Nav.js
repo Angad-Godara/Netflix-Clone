@@ -32,7 +32,7 @@ function Nav() {
                 />
                 <img
                     className='nav__avatar'
-                    src='https://i.imgflip.com/3iin1n.jpg'
+                    src='https://s.keepmeme.com/files/en_posts/20201023/sad-black-kid-sitting-and-thinking-meme.jpg'
                     alt=''
                 />
             </div>
