@@ -9,18 +9,17 @@ function Banner() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(requests.fetchNetflixOriginals);
+            const request = await axios.get(requests?.fetchNetflixOriginals);
             setMovie(
                 request.data.results[
-                Math.floor(Math.random() * requests.data.results.length - 1)
+                Math.floor(Math.random() * request?.data?.results?.length - 1)
                 ]
             );
+            return request;
         }
 
         fetchData();
     }, [])
-
-    console.log(movie);
 
     const desclmt = 250;
     const truncate = (str) => {
@@ -32,46 +31,20 @@ function Banner() {
             className='banner'
             style={{
                 backgroundSize: 'cover',
-                backgroundImage: `url("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/netflix-movie-series-download-template-design-3a7d8e00db6fffde55bb1c0e8a65eb79_screen.jpg?ts=1605595145")`,
-                backgroundPosition: 'center center'
+                backgroundImage: `url(${movie?.backdrop_path &&
+                    `https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`})`,
+                backgroundPosition: 'center center',
             }}
         >
             <div className='banner__contents'>
-                <h1 className='banner__title'>Movie Name</h1>
+                <h1 className='banner__title'>{
+                    movie?.title || movie?.name || movie?.original_name
+                }</h1>
                 <div className='banner__buttons'>
                     <button className='banner__button'>Play</button>
                     <button className='banner__button'>My List</button>
                 </div>
-                <h1 className='banner__description'>{truncate(`This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description
-                    This is a test description`)}
+                <h1 className='banner__description'>{truncate(`${movie?.overview}`)}
 
                 </h1>
             </div>
