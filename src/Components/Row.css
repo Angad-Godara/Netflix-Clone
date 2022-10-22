@@ -39,3 +39,15 @@
     transform: scale(1.09);
     opacity: 1;
 }
+
+@media only screen and (max-width: 400px) {
+    .row__poster{
+        height: 50px;
+    }
+    .row__posterLarge{
+        min-height: 70px;
+    }
+    .row__posters{
+        overflow-x:hidden;
+    }
+  }
