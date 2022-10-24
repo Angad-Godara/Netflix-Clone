@@ -1,6 +1,7 @@
 .row{
     color: white;
     margin-left: 20px;
+    margin-top: 20px;
 }
 
 .row__title{
@@ -32,7 +33,7 @@
 }
 
 .row__posterLarge{
-    min-height: 250px;
+    height: 250px;
 }
 
 .row__posterLarge:hover{
@@ -40,14 +41,11 @@
     opacity: 1;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 490px) {
     .row__poster{
         height: 50px;
     }
-    .row__posterLarge{
-        min-height: 70px;
-    }
-    .row__posters{
-        overflow-x:hidden;
+    .row{
+        margin-top: 2.4rem;
     }
   }

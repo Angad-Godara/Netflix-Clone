@@ -62,7 +62,7 @@
     transition: all 0.3s;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 490px) {
     .banner__title{
         font-size: 20px;
     }
@@ -75,5 +75,13 @@
     }
     .banner{
         height: 300px;
+    }
+    .banner--fadeBottom{
+        height: 0.4rem;
+        background-image: linear-gradient(
+            180deg, 
+            transparent,
+            #111
+        );
     }
   }
