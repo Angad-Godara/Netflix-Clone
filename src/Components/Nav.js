@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Nav.css'
+import { Link } from 'react-router-dom';
 
 function Nav() {
 
@@ -30,11 +31,12 @@ function Nav() {
                     src="https://raw.githubusercontent.com/kunaal438/netflix-clone-2.0/master/public/img/logo.png"
                     alt=''
                 />
-                <img
+                <Link to='/profile'><img
                     className='nav__avatar'
-                    src='https://s.keepmeme.com/files/en_posts/20201023/sad-black-kid-sitting-and-thinking-meme.jpg'
+                    src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png'
                     alt=''
                 />
+                </Link>
             </div>
         </div>
     )

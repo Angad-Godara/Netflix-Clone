@@ -36,6 +36,5 @@
     right: 20px;
     width: 30px;
     object-fit: cover;
-    border-radius: 50%;
-    border: #111 solid 2px;
+    border: rgb(135, 135, 135) solid 1px;
 }
