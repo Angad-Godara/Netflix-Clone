@@ -13,9 +13,7 @@ function SignUp() {
         auth.createUserWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value
-        ).then((authUser) => {
-            console.log(authUser)
-        }).catch((error) => {
+        ).catch((error) => {
             alert(error.message)
         })
     }
@@ -26,9 +24,7 @@ function SignUp() {
         auth.signInWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value
-        ).then((authUser) => {
-            console.log(authUser)
-        }).catch((error) => {
+        ).catch((error) => {
             alert(error.message)
         })
 
@@ -38,7 +34,6 @@ function SignUp() {
     const authsignIn = (e) => {
         e.preventDefault()
         auth.signInWithPopup(provider)
-            .then((result) => console.log(result))
             .catch((error) => {
                 alert(error.message)
             })

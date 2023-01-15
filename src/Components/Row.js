@@ -19,8 +19,6 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
 
     }, [fetchUrl])
 
-    console.log(movies);
-
     return (
         <div className='row'>
             <h2 className='row__title'>{title}</h2>

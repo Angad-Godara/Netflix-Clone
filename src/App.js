@@ -4,7 +4,8 @@ import HomeScreen from './Components/HomeScreen';
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  useNavigate
 } from "react-router-dom";
 import LoginScreen from './Components/LoginScreen'
 import { auth } from './firebase';
@@ -23,7 +24,8 @@ function App() {
       if (userAuth) {
         dispatch(login({
           uid: userAuth.uid,
-          email: userAuth.email
+          email: userAuth.email,
+          photoURL: userAuth?.photoURL
         }))
 
       } else {
