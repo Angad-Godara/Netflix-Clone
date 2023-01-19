@@ -4,14 +4,14 @@ import HomeScreen from './Components/HomeScreen';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  useNavigate
+  Route
 } from "react-router-dom";
 import LoginScreen from './Components/LoginScreen'
 import { auth } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
 import Profile from './Components/Profile';
+import Auth from './Components/UserUp/Auth';
 
 function App() {
   const user = useSelector(selectUser);
@@ -53,10 +53,13 @@ function App() {
               <Route exact path="/profile"
                 element={<Profile />}
               />
+              <Route exact path="/auth"
+                element={<Auth />}
+              />
             </Routes>
           )}
       </Router>
-    </div>
+    </div >
   );
 }
 

@@ -1,0 +1,70 @@
+.auth__wrapper{
+    color: white;
+    position: relative;
+    height: 100vh;
+    background:url("https://assets.nflxext.com/ffe/siteui/vlv3/0ef67cc5-0aa7-47cf-87bd-7f595afc7cfb/c96f2a1d-1627-40aa-a29e-6ab6b27b35ab/IN-en-20221107-popsignuptwoweeks-perspective_alpha_website_large.jpg") center no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset__password__form{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0,0,0,0.85);
+    max-width: 300px;
+    padding: 50px;
+    border-radius: 9px;
+}
+
+.reset__password__form > input{
+    outline-width: 0;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 15px;
+}
+
+.reset__password__form > button{
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #e50914;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.reset__password__form > button:disabled{
+    background-color: #cea3a6;
+    cursor: not-allowed;
+}
+
+.reset__password__form > h1{
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.reset__password__form > img{
+    margin-bottom: 20px;
+    align-self: center;
+    object-fit: contain;
+    width: 87px;
+}
+
+.input__errors{
+    color: #e50914cb;
+    margin-bottom: 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}

@@ -20,9 +20,9 @@ function Profile() {
                         <h2>{user.email}</h2>
                         <div className="profile__actions">
                             <p>INFO: These updations are currently under development</p>
-                            <button className='profileScreen__updates'>Verify Email</button>
-                            <button className='profileScreen__updates'>Update Email</button>
-                            <button className='profileScreen__updates'>Update Password</button>
+                            {/* <button className='profileScreen__updates'>Verify Email</button> */}
+                            {/* <button className='profileScreen__updates' onClick={() => auth.currentUser.updateEmail}>Update Email</button> */}
+                            <button className='profileScreen__updates' onClick={() => auth.sendPasswordResetEmail(user.email)}>Update Password</button>
                             <button className='profileScreen__signOut' onClick={() => auth.signOut()}>Sign Out</button>
                         </div>
                     </div>

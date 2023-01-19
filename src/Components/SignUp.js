@@ -49,8 +49,9 @@ function SignUp() {
                 <button type='submit' onClick={authsignIn}>Sign In With Google</button>
                 <h4><span className='signupScreen__gray'>New to Netflix?</span>
                     <span className='signupScreen__link' onClick={register}> Sign Up now</span></h4>
+                <h4 className='signupScreen__link' onClick={register}> Forgot Password</h4>
             </form>
-        </div>
+        </div >
     )
 }
 
